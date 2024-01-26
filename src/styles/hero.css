@@ -1,0 +1,58 @@
+/* calling fonts */
+
+@font-face {
+    font-family:'Gordita-Bold' ;
+    src: url('./assets/Fonts/Gordita/Gordita\ Bold.otf');
+  }
+.catchph{
+color: #c3eed7;
+font-family: 'Clash Display', sans-serif;
+text-align: center;
+font-size: 25px;
+padding-top :450px;
+}
+    
+     
+.Heading {
+
+    text-align: center;
+    font-family: 'Clash Display';
+    font-size: 70px;
+
+}
+
+.text {
+    font-family: 'Satoshi', sans-serif;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* mobile phones */
+@media only screen and (max-width: 768px) {
+ 
+    .catchph{
+    color: #c3eed7;
+    font-family: 'Clash Display', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    padding-top :450px;
+    
+    }
+
+    .Heading {
+
+        text-align: center;
+        font-family: 'Clash Display';
+        font-size: 48px;
+    
+    }
+    .text {
+        font-family: 'Satoshi', sans-serif;
+        text-align: center;
+        font-size: 16px;
+    }
+    
+        
+ }
+
+ 

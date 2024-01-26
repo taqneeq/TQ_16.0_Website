@@ -1,0 +1,109 @@
+@font-face {
+    font-family: 'Argentum-Bold';
+    src: url('../assets/Fonts/argentum/ArgentumSans-Bold.ttf');
+  }
+  
+  @font-face {
+    font-family: 'Argentum-light';
+    src: url('../assets/Fonts/argentum/ArgentumSans-Light.ttf');
+  }
+  
+  .project-main {
+    display: flex;
+    flex-direction: row;
+    border-style: solid;
+    position: relative;
+    width: 100%;
+    color: #bee8d1;
+    background-color: #222;
+    border-top: 1px dotted white;
+  }
+  
+  .projects {
+    color: #bee8d1;
+    background-color: #222;
+    align-items: left;
+    text-align: left;
+  }
+  
+  .catch_projects {
+    font-family: 'Clash Display', sans-serif;
+    text-align: left;
+    padding-left: 50px;
+    padding-top: 100px;
+    padding-right: 50px;
+    background-color: #222;
+  }
+  
+  .Projects-heading {
+    font-family: 'Argentum-Bold';
+    display: block;
+    color: white;
+    text-align: left;
+    padding-left: 50px;
+    padding-top: 80px;
+    font-size: 40px;
+    background-color: #222;
+  }
+  
+  .projects-text {
+    font-family: 'Argentum-light';
+    color: white;
+    text-align: left;
+    padding-left: 50px;
+    padding-top: 20px;
+    width: 600px;
+    padding-bottom: 20px;
+    background-color: #222;
+  }
+  .project-button{
+    padding-left:50px;
+    padding-bottom: 20px;
+  }
+  .omega-button {
+    background-color: transparent;
+    font-family: 'Clash Display';
+    word-spacing: 3px;
+    color: #bee8d1;
+    font-weight: 200;
+    padding: 0.5rem 3rem;
+    border: 2px solid #bee8d1;
+    border-radius: 2rem;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    align-items: flex-start;
+    margin-right: auto;
+    
+  }
+  
+  
+  .omega-button:hover {
+    background-color: #bee8d1;
+    color: #f0e9e9;
+    cursor: pointer;
+  }
+  .project-button a{
+    text-decoration: none;
+    text-emphasis: none;
+  }
+  @media only screen and (max-width: 600px) {
+    .Projects-heading{
+        padding-top: 10px;
+    }
+    .projects-text {
+      font-family: 'Argentum-light';
+      color: white;
+      text-align: left;
+      padding-left: 50px;
+      padding-top: 20px;
+      width: 300px;
+      padding-bottom: 50px;
+    }
+  
+    .omega-button {
+        margin-top: 10px;
+      }
+    .project-main{
+        flex-wrap: wrap;
+    }
+  }
+  
