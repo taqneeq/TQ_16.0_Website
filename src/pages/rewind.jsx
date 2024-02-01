@@ -1,12 +1,12 @@
 import React from 'react'
 import Nav from '../components/nav'
 import '../styles/style.css'
-const Bytes = () => {
+const Rewind = () => {
   return (
     <div className='main' >
-      <Nav />
+    
     </div>
   )
 }
 
-export default Bytes
+export default Rewind
