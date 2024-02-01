@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import Home from './pages/Home';
-import Work from './pages/Work';
-import Bytes from './pages/Byte';
+import Workshops from './pages/Workshops';
+import Event from './pages/events';
 import About from './pages/About';
+import Schedule from './pages/Schedule';
+import Contact from './pages/contact';
+import Collaborations from './pages/collaborations';
+import Sponsors from './pages/Sponsors'
+import Rewind from './pages/rewind'
 import RingLoader from "react-spinners/RingLoader";
 import './styles/style.css'
 
@@ -27,7 +32,7 @@ function App() {
   }, []);
 
   const navigateToWork = () => {
-    navigate('/work');
+    navigate('/workshops');
   };
 
   return (
@@ -49,9 +54,14 @@ function App() {
           <Routes>
             <Route path="/" element={<Navigate to="/home" />} />
             <Route path="/home" element={<Home />} />
-            <Route path="/work" element={<Work navigateToWork={navigateToWork} />} />
-            <Route path="/bytes" element={<Bytes />} />
+            <Route path="/workshops" element={<Workshops navigateToWork={navigateToWork} />} />
+            <Route path="/event" element={<Event />} />
+            <Route path="/collaborations" element={<Collaborations />} />
+            <Route path="/sponsors" element={<Sponsors />} />
             <Route path="/about" element={<About />} />
+            <Route path="/rewind" element={<Rewind />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/schedule" element={<Schedule />} />
           </Routes>
         </Router>
       )}
