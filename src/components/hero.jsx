@@ -7,9 +7,9 @@ const Hero = () => {
       {/* <div className='overlay'></div> */}
       <video className='video_bg' src={VideoBg} data-autoPlay autoPlay webkit-playsinline playsinline loop muted />
       <div className='content'>
-        <p className='catchph'>Freelance-Designer-Devloper</p>
-        <h1 className='Heading'>katapliktikós/ Visual Designer</h1>
-        <p className='text'>"I'm Prabir Kalwani, a freelance Web Developer and App Developer based in Mumbai, India. My specialty is creating beautiful and functional websites and applications using various programming languages."</p>
+      <p className='catchph'>NMIMS' Official Techfest</p>
+        <h1 className='Heading'>Taqneeq</h1>
+        <p className='text'>Over the years, Taqneeq has turned out to be an exceptional tech fest and has illuminated each & every aspect of Technology</p>
       </div>
       </div>
   );

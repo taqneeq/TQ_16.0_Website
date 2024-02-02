@@ -1,20 +1,14 @@
-import React, { useState, useEffect } from "react";
-import {
-	BrowserRouter as Router,
-	Routes,
-	Route,
-	Navigate,
-	useNavigate,
-} from "react-router-dom";
-import Home from "./pages/Home";
-import Work from "./pages/Work";
-import Bytes from "./pages/Byte";
-import About from "./pages/About";
-import Rewind from "./pages/Rewind";
-import Contact from "./pages/Contact";
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate, useNavigate } from 'react-router-dom';
+import Home from './pages/Home';
+import Events from './pages/Events';
+import About from './pages/About';
 import RingLoader from "react-spinners/RingLoader";
 import "./styles/style.css";
-
+import Sponsors from './pages/Sponsors';
+import Rewind from "./pages/Rewind"
+import Workshops from './pages/Workshops';
+import Contact from "./pages/Contact"
 function App() {
 	// preloader
 	const [loading, setLoading] = useState(false);
@@ -39,9 +33,9 @@ function App() {
 	};
 
 	return (
-		<div className="preloader">
+		<>
 			{loading ? (
-				<>
+				<div className='preloader'>
 					<RingLoader
 						color={"#ffff"}
 						loading={loading}
@@ -51,17 +45,18 @@ function App() {
 						className="ringloader"
 					/>
 					<p className="loading-percentage">{`${loadingPercentage}%`}</p>
-				</>
+				</div>
 			) : (
 				<Router>
 					<Routes>
 						<Route path="/" element={<Navigate to="/home" />} />
 						<Route path="/home" element={<Home />} />
 						<Route
-							path="/work"
-							element={<Work navigateToWork={navigateToWork} />}
+							path="/sponsors"
+							element={<Sponsors/>} />
+            <Route path="/events" element={<Events />}
 						/>
-						<Route path="/bytes" element={<Bytes />} />
+						<Route path="/workshops" element={<Workshops />} />
 						<Route path="/about" element={<About />} />
 						<Route path="/rewind" element={<Rewind />} />
 						<Route path="/contact" element={<Contact />} />
@@ -69,7 +64,7 @@ function App() {
 					</Routes>
 				</Router>
 			)}
-		</div>
+		</>
 	);
 
 	const navigate = useNavigate();
