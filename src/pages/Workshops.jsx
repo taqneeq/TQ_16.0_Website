@@ -1,100 +1,122 @@
-// Workshops.js
+// Events.js
 import React from "react";
 import Nav from "../components/nav";
-const workshopsData = [
-  {
-    name: "Web Development Workshop",
-    description:
-      "Learn the fundamentals of web development with hands-on coding exercises. No prior experience required!",
-    thumbnail:
-      "https://www.elegantthemes.com/blog/wp-content/uploads/2018/12/top11.png",
-    date: "2024-08-10",
-    time: "3:00 PM",
-  },
-  {
-    name: "Digital Marketing Bootcamp",
-    description:
-      "Join our intensive digital marketing bootcamp and acquire practical skills for online success.",
-    thumbnail:
-      "https://cdn.acodez.in/wp-content/uploads/2022/12/Banner-image.png",
-    date: "2024-09-15",
-    time: "1:30 PM",
-  },
-  {
-    name: "Digital Marketing Bootcamp",
-    description:
-      "Join our intensive digital marketing bootcamp and acquire practical skills for online success.",
-    thumbnail:
-      "https://cdn.acodez.in/wp-content/uploads/2022/12/Banner-image.png",
-    date: "2024-09-15",
-    time: "1:30 PM",
-  },
 
-  {
-    name: "Digital Marketing Bootcamp",
-    description:
-      "Join our intensive digital marketing bootcamp and acquire practical skills for online success.",
-    thumbnail:
-      "https://cdn.acodez.in/wp-content/uploads/2022/12/Banner-image.png",
-    date: "2024-09-15",
-    time: "1:30 PM",
-  },
-  // Add more workshops as needed
+const eventsData = [
+	{
+		name: "Digital Marketing Bootcamp",
+		description:
+			"Join our intensive digital marketing bootcamp and acquire practical skills for online success.",
+		thumbnail:
+			"https://cdn.acodez.in/wp-content/uploads/2022/12/Banner-image.png",
+		date: "2024-09-15",
+		time: "1:30 PM",
+	},
+	{
+		name: "Digital Marketing Bootcamp",
+		description:
+			"Join our intensive digital marketing bootcamp and acquire practical skills for online success.",
+		thumbnail:
+			"https://cdn.acodez.in/wp-content/uploads/2022/12/Banner-image.png",
+		date: "2024-09-15",
+		time: "1:30 PM",
+	},
+
+	{
+		name: "Digital Marketing Bootcamp",
+		description:
+			"Join our intensive digital marketing bootcamp and acquire practical skills for online success.",
+		thumbnail:
+			"https://cdn.acodez.in/wp-content/uploads/2022/12/Banner-image.png",
+		date: "2024-09-15",
+		time: "1:30 PM",
+	},
+	// Add more workshops as needed
 ];
 
-function formatWorkshopDate(workshop) {
-  const workshopDate = new Date(workshop.date);
-  const options = {
-    weekday: "long",
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  };
-  const formattedDate = workshopDate.toLocaleDateString("en-US", options);
-
-  return formattedDate;
+function EventCard({ event }) {
+	return (
+		<div className=" bg-slate-100 rounded-2xl shadow-gray-700/25  ">
+			<img
+				src={event.thumbnail}
+				alt={event.name}
+				className="w-fit mb-4 rounded-t-2xl bg-cover"
+			/>
+			<div className="px-6 py-4 space-y-4">
+				<h2 className="text-2xl  lg:text-3xl pb-2 font-bold text-gray-900">
+					{event.name}
+				</h2>
+				<p className="text-gray-700  tracking-tight">
+					{event.description}
+				</p>
+				<p className="text-gray-700  mt-2"> 🗓️ {event.date}</p>
+				<p className="text-gray-700 mt-2">⏱️ {event.time} </p>
+				<a class="pt group relative inline-block text-sm font-medium text-white focus:outline-none focus:ring rounded-lg">
+					<span class="absolute inset-0 border border-blue-600 group-active:border-blue-500 rounded-lg"></span>
+					<span class="block border border-blue-600 bg-blue-600 px-12 py-3 transition-transform active:border-blue-500 active:bg-blue-500 group-hover:-translate-x-1 group-hover:-translate-y-1 rounded-lg">
+						Register Now!
+					</span>
+				</a>{" "}
+			</div>
+		</div>
+	);
 }
 
 function Workshops() {
-  return (
-    <>
-          <Nav />
+	return (
+		<>
+			<Nav />
+			<div className="py-24 text-gray-300">
+				<div className="mx-auto">
+					<h1 className="text-4xl font-black text-red-500 text-center mb-8">
+						Workshops
+					</h1>
+					<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl place-items-center mx-auto h-fit p-10">
+						{eventsData.map((event, index) => (
+							<EventCard key={index} event={event} />
+						))}
+						{eventsData.map((event, index) => (
+							<a class="group relative block bg-black rounded">
+								<img
+									src={event.thumbnail}
+									alt={event.name}
+									class="absolute inset-0 h-full w-full object-cover opacity-40 transition-opacity group-hover:opacity-30 rounded"
+								/>
 
-    <div className="py-12 text-gray-300 bg-black w-screen">
+								<div class="relative p-4 sm:p-6 lg:p-8 ">
+									<p class="text-sm font-medium uppercase tracking-widest text-pink-500">
+										{event.name}
+									</p>
 
-      <div className="container mx-auto">
-        <h1 className="text-4xl font-bold text-blue-500 text-center mb-8">
-          Upcoming Workshops
-        </h1>
-        <div className="grid grid-cols-1 mt-10 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {workshopsData.map((workshop, index) => (
-            <div
-              key={index}
-              className="event-card p-6 border-2 border-gray-300 hover:scale-110 rounded-lg shadow-md"
-            >
-              <img
-                src={workshop.thumbnail}
-                alt={`${workshop.name} Thumbnail`}
-                className="mx-auto mb-4 rounded-md"
-              />
-              <h2 className="text-2xl text-red-500 font-semibold mb-2">
-                {workshop.name}
-              </h2>
-              <p className="font-light text-md mb-2">{workshop.description}</p>
-              <p className="font-medium mb-2">{formatWorkshopDate(workshop)}</p>
-              <p className="font-light text-md mb-4">{workshop.time}</p>
-              <div className="mt-4">
-                <button className="bg-blue-500 px-8 py-2 rounded text-white">
-                  REGISTER
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-    </>
-  );
+									<p class="text-xl font-bold text-white sm:text-2xl md:-mb-16">
+										{event.description}
+									</p>
+
+									<div class="mt-32 sm:mt-48 lg:mt-64">
+										<div class="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100 space-y-3 ">
+											<p className="  mt-2">
+												{" "}
+												🗓️ {event.date}
+											</p>
+											<p className=" mt-2">
+												⏱️ {event.time}{" "}
+											</p>
+											<a class="pt group relative inline-block text-sm font-medium text-white focus:outline-none focus:ring rounded-lg">
+												<span class="absolute inset-0 border-2 border-blue-600 group-active:border-blue-500 rounded-lg"></span>
+												<span class="block border border-blue-600 bg-blue-600 px-12 py-3 transition-transform active:border-blue-500 active:bg-blue-500 group-hover:-translate-x-1 group-hover:-translate-y-1 rounded-lg">
+													Register Now!
+												</span>
+											</a>{" "}
+										</div>
+									</div>
+								</div>
+							</a>
+						))}
+					</div>
+				</div>
+			</div>
+		</>
+	);
 }
 
 export default Workshops;
