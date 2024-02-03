@@ -14,11 +14,14 @@ const Navbar = () => {
       <div className="absolute top-0 left-0 z-50 w-full h-20 bg-black">
         <div className="w-full h-full flex justify-between items-center py-4 px-4 md:px-8 lg:px-12">
           <div className="h-full aspect-square bg-white rounded-full">
+          <Link to="/">
             <img
               src="src/assets/logo.png"
               alt="Logo"
               className="h-full aspect-square"
+
             />
+            </Link>
           </div>
           <div className="block lg:hidden">
             <button
@@ -66,6 +69,7 @@ const Navbar = () => {
             <li>
               <Link to="/contact">Contact</Link>
             </li>
+
           </ul>
         </div>
       </div>

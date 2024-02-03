@@ -9,6 +9,8 @@ import Sponsors from './pages/Sponsors';
 import Rewind from "./pages/Rewind"
 import Workshops from './pages/Workshops';
 import Contact from "./pages/Contact"
+import Schedule from './pages/Schedule';
+import './styles/globals.css'
 function App() {
 	// preloader
 	const [loading, setLoading] = useState(false);
@@ -60,6 +62,7 @@ function App() {
 						<Route path="/about" element={<About />} />
 						<Route path="/rewind" element={<Rewind />} />
 						<Route path="/contact" element={<Contact />} />
+						<Route path="/schedule" element={<Schedule />} />
 						<Route path="*" element={<Navigate to="/home" />} />
 					</Routes>
 				</Router>
