@@ -3,119 +3,131 @@ import React from "react";
 import Nav from "../components/nav";
 
 const eventsData = [
-	{
-		name: "Design Conference",
-		description:
-			"Join us for a creative journey through the world of design. Learn from leading designers and artists.",
-		thumbnail:
-			"https://images.squarespace-cdn.com/content/v1/5230e9f8e4b06ab69d1d8068/1796c052-2f39-459d-9803-948677a9ecb2/Space+Tech+Expo.jpg",
-		date: "2024-07-20",
-		time: "2:30 PM",
-	},
-	{
-		name: "Tech Expo 2024",
-		description:
-			"Explore the latest in technology with industry experts. Don't miss out on exciting demos and discussions!",
-		thumbnail:
-			"https://images.squarespace-cdn.com/content/v1/5230e9f8e4b06ab69d1d8068/1796c052-2f39-459d-9803-948677a9ecb2/Space+Tech+Expo.jpg",
-		date: "2024-06-15",
-		time: "10:00 AM",
-	},
-	{
-		name: "Design Conference",
-		description:
-			"Join us for a creative journey through the world of design. Learn from leading designers and artists.",
-		thumbnail:
-			"https://images.squarespace-cdn.com/content/v1/5230e9f8e4b06ab69d1d8068/1796c052-2f39-459d-9803-948677a9ecb2/Space+Tech+Expo.jpg",
-		date: "2024-07-20",
-		time: "2:30 PM",
-	},
-	// Add more events as needed
+  {
+    name: "Tech Expo",
+    description:
+      "Show case of all mechanical and electrical working models made by college students competing against each other to be proved as the best model of tech expo.",
+    thumbnail:
+      "https://images.unsplash.com/photo-1516192518150-0d8fee5425e3?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cm9ib3RpYyUyMGFybXxlbnwwfHwwfHx8MA%3D%3D",
+    date: "2024-09-15",
+    time: "1:30 PM",
+  },
+  {
+    name: "Mirror code conquer (ESCAPE ROOM):",
+    description:
+	"Escape room filled with all technical levels and the contestant has to pass all the levels to be crowned the winner.",
+    thumbnail:
+      "https://www.science.edu.sg/images/default-source/scs-images/whats-on/exhibitions/mirror-maze/carousel/mirrormaze-carousel-01.jpg",
+    date: "2024-09-15",
+    time: "1:30 PM",
+  },
+
+  {
+    name: "RC Rocket League",
+    description:" Rocket league but in real life. Use remote controlled RC cars to beat you opponent by scoring more goals I the given time limit.",
+    thumbnail:
+      "https://assetsio.reedpopcdn.com/Rocket-League-(header-suggestion).jpg?width=1600&height=900&fit=crop&quality=100&format=png&enable=upscale&auto=webp",
+    date: "2024-09-15",
+    time: "1:30 PM",
+  },
+  {
+	name:"Cycle Simulator ",
+	description:" Cycle as fast as you can can to beat the previous players RPM. Can you become the cycle champion.",
+    thumbnail:"https://static.wixstatic.com/media/ed3ec7_d6d218598f324359ae6750997f52e860~mv2.jpeg/v1/fill/w_1080,h_516,al_c,q_85,enc_auto/ed3ec7_d6d218598f324359ae6750997f52e860~mv2.jpeg",
+    date: "2024-09-15",
+    time: "1:30 PM",
+  },
+  {
+    name: "Decodathon",
+    description:" Debugging the code given in a particular time limit.",
+    thumbnail:"https://images.unsplash.com/photo-1575089976121-8ed7b2a54265?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    date: "2024-09-15",
+    time: "1:30 PM",
+  },
+  {
+	name:"Balloon burst derby",
+	description:" Includes remote controlled cars which compete with each other one of them has pins and the other has a balloon and the car with pins tries to burst the balloons on the other car to win ",
+    thumbnail:
+      "https://assetsio.reedpopcdn.com/Rocket-League-(header-suggestion).jpg?width=1600&height=900&fit=crop&quality=100&format=png&enable=upscale&auto=webp",
+    date: "2024-09-15",
+    time: "1:30 PM",
+  },
+  {
+    name: "Rod Dropper",
+    description:"7 rods are dropped in a random sequence and at a random time interval you have to catch all the 7 rods to wi the game while keeping all the rods in our hand until the last one is caught.",
+    thumbnail:
+      "https://assetsio.reedpopcdn.com/Rocket-League-(header-suggestion).jpg?width=1600&height=900&fit=crop&quality=100&format=png&enable=upscale&auto=webp",
+    date: "2024-09-15",
+    time: "1:30 PM",
+  },
+  {
+	name:"F1 Timer",
+	description:" Lights out and here we go ! Start your car engine as fast as you can with a click of the button thats given. You keep climbing the leaderboard charts depending on how fast your reaction time is. ",
+    thumbnail:
+      "https://assetsio.reedpopcdn.com/Rocket-League-(header-suggestion).jpg?width=1600&height=900&fit=crop&quality=100&format=png&enable=upscale&auto=webp",
+    date: "2024-09-15",
+    time: "1:30 PM",
+  },
+  {
+	name:"Labyrinth Quest",
+	description:"Balance the ball and guide it through the different routes on our wooden maze to solve the puzzle and win the game. ",
+    thumbnail:
+	"https://images.unsplash.com/photo-1590278458425-6aa3912a48a5?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    date: "2024-09-15",
+    time: "1:30 PM",
+  }
+  // Add more workshops as needed
 ];
 
-function EventCard({ event }) {
-	return (
-		<div className=" bg-slate-100 rounded-2xl shadow-gray-700/25  ">
-			<img
-				src={event.thumbnail}
-				alt={event.name}
-				className="w-fit mb-4 rounded-t-2xl bg-cover"
-			/>
-			<div className="px-6 py-4 space-y-4">
-				<h2 className="text-2xl  lg:text-3xl pb-2 font-bold text-gray-900">
-					{event.name}
-				</h2>
-				<p className="text-gray-700  tracking-tight">
-					{event.description}
-				</p>
-				<p className="text-gray-700  mt-2"> 🗓️ {event.date}</p>
-				<p className="text-gray-700 mt-2">⏱️ {event.time} </p>
-				<a class="pt group relative inline-block text-sm font-medium text-white focus:outline-none focus:ring rounded-lg">
-					<span class="absolute inset-0 border border-blue-600 group-active:border-blue-500 rounded-lg"></span>
-					<span class="block border border-blue-600 bg-blue-600 px-12 py-3 transition-transform active:border-blue-500 active:bg-blue-500 group-hover:-translate-x-1 group-hover:-translate-y-1 rounded-lg">
-						Register Now!
-					</span>
-				</a>{" "}
-			</div>
-		</div>
-	);
+
+
+export default function Events() {
+  return (
+    <>
+      <Nav />
+      <div className="py-24 text-gray-300">
+        <div className="mx-auto">
+          <h1 className="text-4xl font-black text-red-500 text-center mb-8">
+            Events
+          </h1>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl place-items-center mx-auto h-fit p-10">
+          
+            {eventsData.map((event, index) => (
+              <a class="group relative block bg-black overflow-clip rounded">
+                <img
+                  src={event.thumbnail}
+                  alt={event.name}
+                  class="absolute inset-0 h-full   w-full object-cover opacity-40 transition-opacity group-hover:opacity-30 rounded"
+                />
+
+                <div class="relative p-4 sm:p-6 lg:p-8 ">
+                  <p class="text-sm font-medium uppercase tracking-widest text-pink-500">
+                    {event.name}
+                  </p>
+
+                  <p class="text-xl font-bold text-white sm:text-2xl md:-mb-16">
+                    {event.description}
+                  </p>
+
+                  <div class="mt-32 sm:mt-48 lg:mt-64">
+                    <div class="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100 space-y-3 ">
+                
+                      <a class="pt group relative inline-block text-sm font-medium text-white focus:outline-none focus:ring rounded-lg">
+                        <span class="absolute inset-0 border-2 border-blue-600 group-active:border-blue-500 rounded-lg"></span>
+                        <span class="block border border-blue-600 bg-blue-600 px-12 py-3 transition-transform active:border-blue-500 active:bg-blue-500 group-hover:-translate-x-1 group-hover:-translate-y-1 rounded-lg">
+                          Register Now!
+                        </span>
+                      </a>{" "}
+                    </div>
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }
 
-function Events() {
-	return (
-		<>
-			<Nav />
-			<div className="py-24 text-gray-300">
-				<div className="mx-auto">
-					<h1 className="text-4xl font-black text-red-500 text-center mb-8">
-						Upcoming Events
-					</h1>
-					<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl place-items-center mx-auto h-fit p-10">
-						{eventsData.map((event, index) => (
-							<EventCard key={index} event={event} />
-						))}
-						{eventsData.map((event, index) => (
-							<a class="group relative block bg-black rounded">
-								<img
-									src={event.thumbnail}
-									alt={event.name}
-									class="absolute inset-0 h-full w-full object-cover opacity-50 transition-opacity group-hover:opacity-30 rounded"
-								/>
 
-								<div class="relative p-4 sm:p-6 lg:p-8 ">
-									<p class="text-sm font-medium uppercase tracking-widest text-pink-500">
-										{event.name}
-									</p>
-
-									<p class="text-xl font-bold text-white sm:text-2xl md:-mb-16">
-										{event.description}
-									</p>
-
-									<div class="mt-32 sm:mt-48 lg:mt-64">
-										<div class="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100 space-y-3 ">
-											<p className="  mt-2">
-												{" "}
-												🗓️ {event.date}
-											</p>
-											<p className=" mt-2">
-												⏱️ {event.time}{" "}
-											</p>
-											<a class="pt group relative inline-block text-sm font-medium text-white focus:outline-none focus:ring rounded-lg">
-												<span class="absolute inset-0 border-2 border-blue-600 group-active:border-blue-500 rounded-lg"></span>
-												<span class="block border border-blue-600 bg-blue-600 px-12 py-3 transition-transform active:border-blue-500 active:bg-blue-500 group-hover:-translate-x-1 group-hover:-translate-y-1 rounded-lg">
-													Register Now!
-												</span>
-											</a>{" "}
-										</div>
-									</div>
-								</div>
-							</a>
-						))}
-					</div>
-				</div>
-			</div>
-		</>
-	);
-}
-
-export default Events;

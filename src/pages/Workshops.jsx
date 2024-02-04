@@ -4,63 +4,44 @@ import Nav from "../components/nav";
 
 const eventsData = [
 	{
-		name: "Digital Marketing Bootcamp",
-		description:
-			"Join our intensive digital marketing bootcamp and acquire practical skills for online success.",
+		name: "AI BOT MAKING WORKSHOP",
+		description:"Discover OpenAI and ChatGPT to delve into the world of advanced artificial intelligence. Learn to build your own AI tool with the provided resources. Utilize OpenAI and GPT to create a customized AI tool tailored to your needs. Finally, deploy it on the internet, making your creation accessible to a global audience.",
 		thumbnail:
 			"https://cdn.acodez.in/wp-content/uploads/2022/12/Banner-image.png",
-		date: "2024-09-15",
-		time: "1:30 PM",
+		date: "2024-02-07",
+		time: "2 PM to 4 PM ",
 	},
 	{
-		name: "Digital Marketing Bootcamp",
-		description:
-			"Join our intensive digital marketing bootcamp and acquire practical skills for online success.",
+		name: "CRYPTOCURRENCY",
+		description:"Create a smart contract effortlessly using Solidity, even with no prior experience. Customize your cryptocurrency to suit your preferences, and easily deploy it to bring your personalized blockchain project to life",
 		thumbnail:
 			"https://cdn.acodez.in/wp-content/uploads/2022/12/Banner-image.png",
-		date: "2024-09-15",
-		time: "1:30 PM",
+		date: "2024-02-08",
+		time: "2 PM to 4 PM ",
 	},
 
 	{
-		name: "Digital Marketing Bootcamp",
-		description:
-			"Join our intensive digital marketing bootcamp and acquire practical skills for online success.",
+		name: "ROBOTICS",
+		description:"Explore robotics in our beginner-friendly workshop. Learn to build and program robots without prior experience. Robotics Kit would be provided aswell",
 		thumbnail:
 			"https://cdn.acodez.in/wp-content/uploads/2022/12/Banner-image.png",
-		date: "2024-09-15",
-		time: "1:30 PM",
+		date: "2024-02-09",
+		time: "1 PM to 4 PM",
 	},
 	// Add more workshops as needed
 ];
+function formatDateString(dateString) {
+	const dateObject = new Date(dateString);
+	const options = {
+	  day: 'numeric',
+	  month: 'short',
+	  year: 'numeric',
+	  weekday: 'long',
+	};
+  
+	return dateObject.toLocaleDateString('en-US', options);
+  }
 
-function EventCard({ event }) {
-	return (
-		<div className=" bg-slate-100 rounded-2xl shadow-gray-700/25  ">
-			<img
-				src={event.thumbnail}
-				alt={event.name}
-				className="w-fit mb-4 rounded-t-2xl bg-cover"
-			/>
-			<div className="px-6 py-4 space-y-4">
-				<h2 className="text-2xl  lg:text-3xl pb-2 font-bold text-gray-900">
-					{event.name}
-				</h2>
-				<p className="text-gray-700  tracking-tight">
-					{event.description}
-				</p>
-				<p className="text-gray-700  mt-2"> 🗓️ {event.date}</p>
-				<p className="text-gray-700 mt-2">⏱️ {event.time} </p>
-				<a class="pt group relative inline-block text-sm font-medium text-white focus:outline-none focus:ring rounded-lg">
-					<span class="absolute inset-0 border border-blue-600 group-active:border-blue-500 rounded-lg"></span>
-					<span class="block border border-blue-600 bg-blue-600 px-12 py-3 transition-transform active:border-blue-500 active:bg-blue-500 group-hover:-translate-x-1 group-hover:-translate-y-1 rounded-lg">
-						Register Now!
-					</span>
-				</a>{" "}
-			</div>
-		</div>
-	);
-}
 
 function Workshops() {
 	return (
@@ -96,7 +77,7 @@ function Workshops() {
 										<div class="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100 space-y-3 ">
 											<p className="  mt-2">
 												{" "}
-												🗓️ {event.date}
+												🗓️ {formatDateString(event.date)}
 											</p>
 											<p className=" mt-2">
 												⏱️ {event.time}{" "}
