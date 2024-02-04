@@ -13,6 +13,7 @@ import Schedule from './pages/Schedule';
 import './styles/globals.css'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Collaborations from './pages/Collaborations';
 function App() {
 	// preloader
 	AOS.init();
@@ -66,7 +67,9 @@ function App() {
 						<Route path="/rewind" element={<Rewind />} />
 						<Route path="/contact" element={<Contact />} />
 						<Route path="/schedule" element={<Schedule />} />
+						<Route path="/Collab" element={<Collaborations />} />
 						<Route path="*" element={<Navigate to="/home" />} />
+						
 					</Routes>
 				</Router>
 			)}
