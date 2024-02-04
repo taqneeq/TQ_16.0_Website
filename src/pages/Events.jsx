@@ -52,8 +52,7 @@ const eventsData = [
 		name: "Balloon burst derby",
 		description:
 			" Includes remote controlled cars which compete with each other one of them has pins and the other has a balloon and the car with pins tries to burst the balloons on the other car to win ",
-		thumbnail:
-			"https://assetsio.reedpopcdn.com/Rocket-League-(header-suggestion).jpg?width=1600&height=900&fit=crop&quality=100&format=png&enable=upscale&auto=webp",
+		thumbnail:"/balloon.jpeg",
 		date: "2024-09-15",
 		time: "1:30 PM",
 	},
@@ -62,7 +61,7 @@ const eventsData = [
 		description:
 			"7 rods are dropped in a random sequence and at a random time interval you have to catch all the 7 rods to wi the game while keeping all the rods in our hand until the last one is caught.",
 		thumbnail:
-			"https://assetsio.reedpopcdn.com/Rocket-League-(header-suggestion).jpg?width=1600&height=900&fit=crop&quality=100&format=png&enable=upscale&auto=webp",
+			"/rod dropper.jpeg",
 		date: "2024-09-15",
 		time: "1:30 PM",
 	},
@@ -70,8 +69,7 @@ const eventsData = [
 		name: "F1 Timer",
 		description:
 			" Lights out and here we go ! Start your car engine as fast as you can with a click of the button thats given. You keep climbing the leaderboard charts depending on how fast your reaction time is. ",
-		thumbnail:
-			"https://assetsio.reedpopcdn.com/Rocket-League-(header-suggestion).jpg?width=1600&height=900&fit=crop&quality=100&format=png&enable=upscale&auto=webp",
+		thumbnail:"/f1.jpeg",
 		date: "2024-09-15",
 		time: "1:30 PM",
 	},

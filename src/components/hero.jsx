@@ -10,6 +10,7 @@ const Hero = () => {
       <p className='catchph'>NMIMS' Official Techfest</p>
         <h1 className='Heading'>Taqneeq</h1>
         <p className='text'>Over the years, Taqneeq has turned out to be an exceptional tech fest and has illuminated each & every aspect of Technology</p>
+        <a href='/' className='py-4 px-8 text-center bg-red-600 text-white rounded-lg mt-10 md:mt-5'> Register for The Talk! </a>
       </div>
       </div>
   );
