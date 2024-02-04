@@ -11,8 +11,11 @@ import Workshops from './pages/Workshops';
 import Contact from "./pages/Contact"
 import Schedule from './pages/Schedule';
 import './styles/globals.css'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 function App() {
 	// preloader
+	AOS.init();
 	const [loading, setLoading] = useState(false);
 	const [loadingPercentage, setLoadingPercentage] = useState(0);
 

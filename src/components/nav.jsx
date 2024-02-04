@@ -1,7 +1,7 @@
 // Navbar.js
 import React, { useState } from "react";
 import { Link } from "react-router-dom"; // If you are using React Router
-
+import image from "../assets/logo.png"
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -16,7 +16,7 @@ const Navbar = () => {
           <div className="h-full aspect-square bg-white rounded-full">
           <Link to="/">
             <img
-              src="src/assets/logo.png"
+              src={image}
               alt="Logo"
               className="h-full aspect-square"
 
