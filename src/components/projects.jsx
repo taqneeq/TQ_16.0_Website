@@ -10,24 +10,20 @@ const Projects = () => {
 					data-aos="fade"
 					data-aos-duration="3000"
 				>
-					My Work
+					TQ16.0
 				</p>
 			</div>
 
 			<div className="projects" data-aos="fade" data-aos-duration="3000">
 				<h1 className="Projects-heading">
-					Projects - Websites Design{" "}
+					Our Events{" "}
 				</h1>
 				<p className="projects-text">
-					I specialize in crafting bespoke web designs that are
-					distinct and eye-catching. My expertise lies in developing
-					interfaces that are immersive, intuitive, and innovative. I
-					also create trendy and imaginative brand visuals and
-					identities.
+				Our events are meticulously crafted with a strong emphasis on technological intricacies. We pride ourselves on curating experiences that delve into the finer details of cutting-edge technology, ensuring a profound and immersive journey for our participants. 
 				</p>
 
 				<div className="project-button">
-					<a href="/work">
+					<a href="/events">
 						<button class="omega-button">Learn More</button>
 					</a>
 				</div>
