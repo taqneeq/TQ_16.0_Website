@@ -81,7 +81,7 @@ const Cards = () => {
   }, []);
 
   return (
-    <div className='main-carousel'>   
+    <div className='main-carousel' >   
      <div class="carousel">
 	<div class="carousel-item">
 		<div class="carousel-box">

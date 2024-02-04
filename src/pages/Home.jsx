@@ -10,7 +10,7 @@ const Home = () => {
 	return (
 		<div className="home">
 			<Nav />
-			<Hero />
+			<Hero  />
 			<Scroll />
 			<Projects />
 			<Cards />
