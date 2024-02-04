@@ -6,11 +6,11 @@ const Projects = () => {
     <div className='project-main'>
     
     <div className="side-text">
-    <p className='catch_projects'>My Work</p>
+    <p className='catch_projects'>Our Events</p>
     </div>
 
     <div className='projects'>  
-      <h1 className='Projects-heading'>Projects - Websites Design </h1>
+      <h1 className='Projects-heading'>Events and Workshops </h1>
       <p className='projects-text'>I specialize in crafting bespoke web designs that are distinct and eye-catching. My expertise lies in developing interfaces that are immersive, intuitive, and innovative. I also create trendy and imaginative brand visuals and identities.</p>
     
       <div className="project-button">
